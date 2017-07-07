@@ -18,7 +18,7 @@ const Graph = (props) => (
         <rect width="4" height="10" transform="translate(0,0)" fill="white"></rect>
       </pattern>
     </defs>
-    <VictoryChart standalone={false} padding={{top: 0, bottom: 20, left: 50, right: 50}} domainPadding={50} animate={{ duration: 500, easing: 'quad' }}>
+    <VictoryChart standalone={false} padding={{top: 0, bottom: 0, left: 50, right: 50}} domainPadding={50} animate={{ duration: 500, easing: 'quad' }}>
       <VictoryAxis dependentAxis
         tickFormat={/* Replace transportation name with emoji */ (mode) => emoji[mode]}
         style={{

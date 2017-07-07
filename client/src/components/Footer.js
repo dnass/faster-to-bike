@@ -4,15 +4,14 @@ import colors from '../colors';
 
 const footerStyle = {
   position: 'absolute',
-  bottom: '24px',
-  left: '50%',
-  transform: 'translateX(-50%)',
-  fontSize: '75%'
+  bottom: '4px',
+  width: '100%'
 }
 
 const aStyle = {
   color: colors.secondary,
-  fontWeight: '700'
+  fontWeight: '700',
+  textDecoration: 'none'
 }
 
 const Footer = () => (

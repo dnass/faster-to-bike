@@ -7,9 +7,6 @@ import registerServiceWorker from './registerServiceWorker';
 import colors from './colors';
 
 const styles = {
-  '*': {
-    boxSizing: 'border-box'
-  },
   html: {
     fontFamily: '"Bitter", serif',
     fontSize: '100%',

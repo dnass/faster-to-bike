@@ -7,26 +7,12 @@ import Results from './components/Results';
 import Footer from './components/Footer';
 import Client from './Client';
 import colors from './colors';
+import dummyData from './dummyData'
 
-//Dummy routes to prefill form on load
-const dummy = [
-  {
-    origin: 'Empire State Building',
-    destination: 'Chinatown NYC'
-  },
-  {
-    origin: 'Buckingham Palace',
-    destination: 'Westminster Abbey'
-  },
-  {
-    origin: 'White House',
-    destination: 'Lincoln Memorial'
-  },
-  {
-    origin: 'Eiffel Tower',
-    destination: 'Louvre'
-  }
-]
+const containerStyle = {
+  minHeight: '100%',
+  position: 'relative'
+}
 
 const topSectionStyle = {
   backgroundColor: colors.secondary,
@@ -62,7 +48,8 @@ const loaderStyle = {
 
 const bottomSectionStyle = {
   margin: '0 auto',
-  maxWidth: '700px'
+  maxWidth: '700px',
+  paddingBottom: '24px'
 }
 
 class App extends Component {
@@ -71,7 +58,7 @@ class App extends Component {
     this.handleOriginChange = this.handleOriginChange.bind(this);
     this.handleDestinationChange = this.handleDestinationChange.bind(this);
     this.submitAddress = this.submitAddress.bind(this);
-    const dummyRoute = dummy[Math.floor(Math.random() * dummy.length)];
+    const dummyRoute = dummyData[Math.floor(Math.random() * dummyData.length)];
     this.state = {
       origin: dummyRoute.origin,
       destination: dummyRoute.destination,
@@ -111,7 +98,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div style={containerStyle}>
         <form style={topSectionStyle} onSubmit={this.submitAddress}>
           <div style={addressBlockStyle}>
             <span>Is bicycling the fastest way to get from</span>
@@ -131,7 +118,7 @@ class App extends Component {
                   value={this.state.destination}
                   onAddressChange={this.handleDestinationChange}
                 />?</span>
-              </div>
+            </div>
           </div>
           <Button text='➭' />
 
