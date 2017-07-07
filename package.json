@@ -1,0 +1,17 @@
+{
+  "name": "faster-to-bike",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"cd client && npm start\"",
+    "server": "node app.js"
+  },
+  "dependencies": {
+    "@google/maps": "^0.4.2",
+    "express": "~4.15.2"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  }
+}

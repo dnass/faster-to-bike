@@ -1,0 +1,13 @@
+{
+  "short_name": "fasterto.bike",
+  "name": "Is it faster to bike?",
+  "icons": [{
+    "src": "favicon.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#4591ff",
+  "background_color": "#4591ff"
+}
