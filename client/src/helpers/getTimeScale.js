@@ -13,7 +13,7 @@ const getTimeScale = (time) => {
     formattedTime = duration(time, 'seconds').asHours().toFixed(1)
     suffix = 'hour';
   }
-  return `${formattedTime} ${suffix}${formattedTime === 1 ? '' : 's'}`
+  return `${formattedTime} ${suffix}${parseInt(formattedTime) === 1 ? '' : 's'}`
 }
 
 export default getTimeScale;

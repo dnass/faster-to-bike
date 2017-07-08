@@ -23,7 +23,7 @@ const Graph = (props) => (
         tickFormat={/* Replace transportation name with emoji */ (mode) => emoji[mode]}
         style={{
           axis: {stroke: 'none'},
-          tickLabels: {fontSize: '28px'}
+          tickLabels: {fontSize: '28px', stroke: 'none'}
         }}
       />
       <VictoryBar
